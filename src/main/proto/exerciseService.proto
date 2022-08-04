@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.exercise";
+option java_outer_classname = "ExerciseService";
+option objc_class_prefix = "HLW";
+
+package com.exercise;
+
+service ExerciseServiceService {
+  rpc send (ExerciseServiceRequest) returns (ExerciseServiceReply) {}
+}
+
+message ExerciseServiceRequest {
+  string name = 1;
+}
+
+message ExerciseServiceReply {
+  string message = 1;
+}
